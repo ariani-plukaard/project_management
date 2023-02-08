@@ -1,8 +1,14 @@
 FactoryBot.define do
+  factory :item do
+    title { 'Item1' }
+    status { 1 }
+    task { nil }
+  end
+
   factory :task do
-    title { "MyString" }
-    due_date { "2023-02-07" }
-    description { "MyText" }
+    title { 'Task1' }
+    due_date { '2023-03-07' }
+    description { 'Faker::Lorem.paragraph' }
     estimated_time { 1 }
     status { 1 }
   end
