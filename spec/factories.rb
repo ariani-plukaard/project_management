@@ -11,6 +11,7 @@ FactoryBot.define do
     description { 'Faker::Lorem.paragraph' }
     estimated_time { 1 }
     status { 1 }
+    project { nil }
   end
 
   factory :user do
@@ -25,5 +26,6 @@ FactoryBot.define do
     due_date { '2023-04-07' }
     description { Faker::Lorem.paragraph }
     status { 1 }
+    user { nil }
   end
 end
