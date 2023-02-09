@@ -14,6 +14,11 @@ RSpec.describe Task, type: :model do
     expect(task).to_not be_valid
   end
 
+  it 'is not valid without a project' do
+    task = Task.new(title: 'test')
+    expect(task).to_not be_valid
+  end
+
   it 'is valid with valid attributes' do
     user = create(:user)
     project = create(:project, user_id: user.id)

@@ -13,6 +13,11 @@ RSpec.describe Project, type: :model do
     expect(project).to_not be_valid
   end
 
+  it 'is not valid without a user' do
+    project = Project.new(title: 'test')
+    expect(project).to_not be_valid
+  end
+
   it 'is valid with valid attributes' do
     user = create(:user)
     project = Project.new(title: 'test')
